@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="Wrap h-screen w-screen bg-smoke-white flex justify-center items-center">
+        <div class="Card bg-white p-8 rounded-lg shadow-sd-md min-w-96">
+            <div class="Tittle text-center mb-6 text-2xl font-bold text-purple2">SPK SAW</div>
+            <div class="Data mb-4">
+                <div class="Username mb-4">
+                    <label class="block text-sm mb-2">Username</label>
+                    <input type="text"
+                        class="w-full p-2 rounded text-base border border-[#ddd] border-solid focus:border-[#4285f4] focus:outline-none focus:shadow-sd-blue">
+                </div>
+                <div class="Password mb-4">
+                    <label class="block text-sm mb-2">Password</label>
+                    <input type="text"
+                        class="w-full p-2 rounded text-base border border-[#ddd] border-solid  focus:border-[#4285f4] focus:outline-none focus:shadow-sd-blue">
+                </div>
+            </div>
+            <div class="Login text-center">
+                <button onclick="login()"
+                    class="w-full p-3 border-none rounded bg-purple2 text-white text-base cursor-pointer hover:bg-[#584dd8] transition-colors">Login</button>
+            </div>
+            <div class="Error hidden text-red-500 justify-center relative text-center top-3">Username atau Password
+                salah</div>
+        </div>
+        <br><br><br><br><br><br>
+    </div>
+</body>
+
+</html>
