@@ -4,35 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>E-Learning</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="Wrap h-screen w-screen bg-smoke-white flex justify-center items-center">
-        <div class="Card bg-white p-8 rounded-lg shadow-sd-md min-w-96">
-            <div class="Tittle text-center mb-6 text-2xl font-bold text-purple2">SPK SAW</div>
-            <div class="Data mb-4">
-                <div class="Username mb-4">
-                    <label class="block text-sm mb-2">Username</label>
-                    <input type="text"
-                        class="w-full p-2 rounded text-base border border-[#ddd] border-solid focus:border-[#4285f4] focus:outline-none focus:shadow-sd-blue">
-                </div>
-                <div class="Password mb-4">
-                    <label class="block text-sm mb-2">Password</label>
-                    <input type="text"
-                        class="w-full p-2 rounded text-base border border-[#ddd] border-solid  focus:border-[#4285f4] focus:outline-none focus:shadow-sd-blue">
-                </div>
+    <div class="wrap w-screen h-screen font-sans bg-bookmark-blue bg-opacity-55 flex justify-center content-center">
+        <div class="card h-full w-full md:w-2/3 lg:w-1/2 flex bg-bookmark-white p-8 md:p-10 lg:p-[4.25rem] rounded-2xl">
+            <div class="content w-full m-auto ">
+                <div class="title text-center text-2xl font-semibold mb-16">Login E-Learning</div>
+                <form onsubmit="login(); return false;">
+                    <fieldset class="form">
+                        <legend class="sr-only">Login Form</legend> <!-- Elemen tersembunyi untuk aksesibilitas -->
+                        <div class="data flex flex-col gap-5">
+                            <!-- Username Field -->
+                            <div class="username flex flex-col gap-1.5">
+                                <label for="id" class="text-sm font-medium ml-1">Id</label>
+                                <input type="text" name="id" placeholder="Enter your Id" required id="id" class="input">
+                            </div>
+
+                            <!-- Password Field -->
+                            <div class="password flex flex-col gap-1.5">
+                                <label for="password" class="text-sm font-medium ml-1">Password</label>
+                                <input type="password" name="password" placeholder="Enter your Password" required
+                                    id="password" class="input">
+                                <div class="text-sm text-bookmark-black text-opacity-45 relative left-2 cursor-pointer">
+                                    Forgot Password?
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Login Button -->
+                        <div class="mt-14">
+                            <button type="submit"
+                                class="w-full input bg-bookmark-blue hover:bg-[#7ebfff] hover:transition-all hover:duration-300 hover:text-bookmark-white font-semibold text-base cursor-pointer text-center">
+                                Login
+                            </button>
+                        </div>
+
+                        <!-- Error Message -->
+                        <p id="error" class=" text-transparent text-base text-red-500 w-full text-center mt-4"
+                            role="alert" aria-live="polite">
+                            Username atau Password salah
+                        </p>
+                    </fieldset>
+                </form>
             </div>
-            <div class="Login text-center">
-                <button onclick="login()"
-                    class="w-full p-3 border-none rounded bg-purple2 text-white text-base cursor-pointer hover:bg-[#584dd8] transition-colors">Login</button>
-            </div>
-            <div class="Error hidden text-red-500 justify-center relative text-center top-3">Username atau Password
-                salah</div>
         </div>
-        <br><br><br><br><br><br>
     </div>
+    <script src="script/main.js"></script>
 </body>
 
 </html>
